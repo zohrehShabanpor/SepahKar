@@ -4,27 +4,510 @@
 	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>قیمت میکسر قنادی، مشخصات فنی و خرید - سپه کار</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-		  rel="stylesheet"
+
+	<style>
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 700;
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_Bold.eot');
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'), url('../assets/fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'), url('../assets/fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 500;
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_Medium.eot');
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), url('../assets/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'), url('../assets/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 300;
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_Light.eot');
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2'), url('../assets/fonts/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'), url('../assets/fonts/ttf/IRANSansWeb(FaNum)_Light.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 200;
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot');
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'), url('../assets/fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'), url('../assets/fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'), url('../assets/fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 400;
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum).eot');
+			src: url('../assets/fonts/eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), url('../assets/fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2'), url('../assets/fonts/woff/IRANSansWeb(FaNum).woff') format('woff'), url('../assets/fonts/ttf/IRANSansWeb(FaNum).ttf') format('truetype')
+		}
+
+		body {
+			font-family: IRANSans !important;
+			font-weight: 300;
+			direction: rtl;
+			margin: 0;
+			overflow-x: hidden !important;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		input,
+		td,
+		textarea,
+		th {
+			font-family: IRANSans !important;
+		}
+
+		.blue-nav {
+			background-color: #01247e;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 13px;
+			padding: 20px 120px 20px 80px;
+		}
+
+		.white-nav {
+			color: #01247e;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 11px 90px;
+			border-bottom: solid 2px #c6c6c6;
+		}
+
+		.nav-logo-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 40px 20px;
+		}
+
+		.nav-logo {
+			width: 100px;
+			object-fit: contain;
+		}
+
+		.nav-SEPAHKAR-en {
+			font-weight: 400;
+			font-size: 20px;
+		}
+
+		.nav-SEPAHKAR-fa {
+			font-size: 34px;
+			font-weight: 500;
+			letter-spacing: 2px;
+		}
+
+		.nav-burger-menu-mobile {
+			display: none;
+		}
+
+		.nav-search-container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.nav-input-container {
+			padding: 10px 15px;
+			border-radius: 2px;
+			background-color: #01247e;
+			border: none;
+			color: #ffffff;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.nav-search-input,
+		.nav-search-input:focus {
+			outline: 0;
+			font-size: 15px;
+			background-color: #01247e;
+			padding-left: 15px;
+			border: none;
+			color: #ffffff;
+			flex-grow: 1;
+		}
+
+		.nav-search-input::placeholder {
+			color: #fff;
+			border-width: 0;
+		}
+
+		.nav-language {
+			color: #4a4a4a;
+			width: fit-content;
+			align-self: end;
+			font-weight: 700;
+			font-size: 13px;
+			margin-top: 22px;
+		}
+
+		.nav-search-container-tablet {
+			display: none;
+		}
+
+		.nav-title-container {
+			display: flex;
+			flex-direction: column;
+			margin: 0 1.5rem;
+			justify-content: center;
+		}
+
+		.body-container {
+			padding-right: 150px;
+			padding-left: 150px;
+		}
+
+		.main-product-header {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 100px 0 60px 0;
+		}
+
+		.main-product-title {
+		}
+
+		.main-product-image {
+			width: 600px;
+			border-radius: 30px;
+		}
+
+		.main-product-title-container {
+			width: 100%;
+			text-align: start;
+		}
+
+		@media screen and (max-width: 1200px) {
+			/*	------------	header	------------	*/
+			.blue-nav {
+				font-size: 14px;
+			}
+
+			.white-nav {
+				padding: 10px 70px;
+				border-bottom: solid 2px #c6c6c6;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 16px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 30px;
+			}
+
+			.nav-search-input {
+				font-size: 14px;
+			}
+
+			.nav-language {
+				font-size: 12px;
+				margin-top: 19px;
+			}
+
+			/*	------------	header	------------	*/
+			.body-container {
+				padding-right: 120px;
+				padding-left: 120px;
+			}
+
+			.main-product-header {
+				margin: 80px 0;
+			}
+
+			.main-product-image {
+				width: 580px;
+			}
+		}
+
+		@media screen and (max-width: 992px) {
+			.blue-nav {
+				font-size: 13px;
+				padding: 13px 130px 13px 70px;
+			}
+
+			.white-nav {
+				justify-content: center;
+				padding: 10px 30px;
+			}
+
+			.nav-search-container {
+				display: none;
+			}
+
+			.nav-search-container-tablet {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-grow: 0.5;
+			}
+
+			.nav-language {
+				margin-top: 0;
+				align-self: center;
+				font-size: 11px;
+			}
+
+			.nav-logo-container {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 30px 20px;
+				width: 100%;
+			}
+
+			.nav-burger-menu-tablet {
+				font-size: 30px;
+				display: flex;
+			}
+
+			.nav-logo {
+				width: 90px;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 16px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 29px;
+			}
+
+			.nav-input-container {
+				padding: 5px 15px;
+				background-color: #313fa0;
+				height: fit-content;
+			}
+
+			.nav-search-input,
+			.nav-search-input:focus {
+				background-color: #313fa0;
+				padding-left: 10px;
+			}
+
+			.body-container {
+				padding-right: 60px;
+				padding-left: 60px;
+			}
+
+			.main-product-header {
+				margin: 90px 0;
+			}
+
+			.main-product-image {
+				width: 470px;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.blue-nav {
+				font-size: 12px;
+				padding: 10px 100px 10px 60px;
+			}
+
+			.white-nav {
+				padding: 8px 20px;
+			}
+
+			.nav-search-container-tablet {
+				flex-grow: 0.7;
+			}
+
+			.nav-language {
+				font-size: 8px;
+			}
+
+			.nav-logo-container {
+				padding: 25px 5px;
+			}
+
+			.nav-logo {
+				width: 70px;
+			}
+
+			.nav-title-container {
+				margin: 0 1rem;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 13px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 22px;
+			}
+
+			.nav-input-container {
+				padding: 5px 8px;
+			}
+
+			.nav-search-input,
+			.nav-search-input:focus {
+				padding-left: 2px;
+			}
+
+			.nav-burger-menu-tablet {
+				font-size: 27px;
+			}
+
+			.body-container {
+				padding-right: 50px;
+				padding-left: 50px;
+			}
+
+			.main-product-header {
+				margin: 40px 0;
+			}
+
+			.main-product-image {
+				width: 350px;
+			}
+		}
+
+		@media screen and (max-width: 576px) {
+			/*	------------	header	------------	*/
+			.blue-nav {
+				font-size: 10px;
+				padding: 8px 30px;
+			}
+
+			.white-nav {
+				flex-direction: column;
+				justify-content: space-between;
+				margin: 15px 30px;
+				padding: 0 0 35px 0;
+				border-bottom: solid 1px #c6c6c6;
+			}
+
+			.nav-logo-container {
+				align-items: center;
+				justify-content: space-between;
+				padding: 10px 0;
+			}
+
+			.nav-logo {
+				width: 70px;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 12px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 24px;
+			}
+
+			.nav-title-container {
+				margin: 0 0.5rem;
+			}
+
+			.nav-burger-menu-mobile {
+				display: flex;
+				font-size: 30px;
+				color: #313fa0;
+			}
+
+			.nav-search-container {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				margin-top: 20px;
+				padding: 0;
+			}
+
+			.nav-input-container {
+				padding: 10px 15px;
+				border-radius: 2px;
+				background-color: #313fa0;
+			}
+
+			.nav-search-input,
+			.nav-search-input:focus {
+				background-color: #313fa0;
+				padding-left: 10px;
+				font-size: 17px;
+			}
+
+			.nav-language {
+				align-self: end;
+				font-size: 10px;
+				margin-top: 15px;
+			}
+
+			.nav-search-container-tablet {
+				display: none;
+			}
+
+			/*	------------	header	------------	*/
+			.body-container {
+				padding-right: 50px;
+				padding-left: 50px;
+			}
+
+			.main-product-header {
+				flex-direction: column;
+				margin-top: 45px;
+			}
+
+			.main-product-title {
+				align-self: start;
+			}
+
+			.main-product-image {
+				width: 100%;
+				border-radius: 25px;
+			}
+
+			.main-product-description {
+				font-size: 18px;
+				line-height: 45px;
+				color: #585858;
+			}
+
+			.main-product-title-container {
+				margin-bottom: 50px;
+			}
+		}
+	</style>
+
+	<link rel="preload"
+		  href="./styles.css"
+		  as="style"
+		  onload="this.rel='stylesheet'"/>
+	<link rel="preload"
+		  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 		  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 		  crossorigin="anonymous"
-		  media="print"
-		  onload="this.media='all'; this.onload=null;"/>
-	<link rel="stylesheet"
+		  as="style"
+		  onload="this.rel='stylesheet'"/>
+	<link rel="preload"
 		  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-		  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-		  crossorigin="anonymous"
-		  media="print"
-		  onload="this.media='all'; this.onload=null;"/>
-	<link href="./styles.css" rel="stylesheet"/>
-	<script async src="../js/collapse.js"></script>
-	<script
+		  as="style"
+		  onload="this.rel='stylesheet'"/>
+
+	<script rel="preload"
+			async
+			src="../js/collapse.js"></script>
+	<script rel="preload"
 			async
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
 			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
 			crossorigin="anonymous"
 	></script>
-	<script
+	<script rel="preload"
 			async
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
 			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
@@ -392,8 +875,10 @@
 						 src="../assets/images/3-planetary-mixer-300x300.jpg"
 						 alt="میکسر قنادی"/>
 					<span class="gallery-zoom-image-container">
-                		<img alt="بزرگنمایی" class="gallery-zoom-image d-block d-sm-none d-lg-block" src="../assets/icons/search.svg">
-						<img alt="بزرگنمایی" class="gallery-zoom-image d-none d-sm-block d-lg-none" src="../assets/icons/search2.svg">
+                		<img alt="بزرگنمایی" class="gallery-zoom-image d-block d-sm-none d-lg-block"
+							 src="../assets/icons/search.svg">
+						<img alt="بزرگنمایی" class="gallery-zoom-image d-none d-sm-block d-lg-none"
+							 src="../assets/icons/search2.svg">
               		</span>
 				</div>
 				<div class="gallery-little-images-container row">
