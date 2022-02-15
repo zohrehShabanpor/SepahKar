@@ -1549,6 +1549,10 @@ main, footer {
 		background-color: #00237d;
 	}
 
+	.primary-title {
+		font-size: 20px;
+	}
+
 	.body-thin-line, .body-thin-blue-line {
 		margin: 50px 0;
 	}
@@ -1558,10 +1562,6 @@ main, footer {
 		width: 60px;
 		margin: 50px 0;
 		align-self: center;
-	}
-
-	.primary-title {
-		font-size: 20px;
 	}
 
 	.footer-separator-line {

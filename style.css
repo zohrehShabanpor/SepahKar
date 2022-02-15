@@ -39,15 +39,100 @@ p {
 	font-weight: 300;
 }
 
-.my-container {
+.main-banner {
+	width: 100%;
+}
+
+.body-container {
 	padding: 0 150px;
 }
 
-.logo-small {
-	width: 158px;
-	height: 119px;
+
+.intro-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 100px 0;
+}
+
+.intro-logo-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.intro-logo-image {
+	width: 120px;
 	object-fit: contain;
 }
+
+.intro-logo-title {
+	color: #01247e;
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-top: 15px;
+}
+
+.intro-description-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex-grow: 1;
+	margin: 0 70px;
+}
+
+.intro-description {
+	text-align: justify;
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 50px;
+	color: #585858;
+	margin-bottom: 20px;
+}
+
+.intro-description-button {
+	width: 250px;
+	padding: 10px 0;
+	border-radius: 5px;
+	border: none;
+	font-size: 17px;
+	font-weight: 500;
+	align-self: end;
+	box-shadow: 0 7px 30px 2px rgba(7, 30, 91, 0.2);
+}
+
+.intro-catalog-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.intro-motto-container {
+	text-align: center;
+}
+
+.intro-motto-title {
+	font-size: 25px;
+	font-weight: 900;
+	color: #303e9f;
+}
+
+.intro-motto-description {
+	font-size: 14px;
+}
+
+.intro-container-mobile {
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.intro-button-container {
+	display: flex;
+	justify-content: center;
+}
+
 
 .carousel-indicators button {
 	background-color: #303e9e !important;
@@ -160,16 +245,6 @@ p {
 	font-size: xx-large;
 	font-weight: 600;
 	color: #01247e;
-}
-
-.intro-title {
-	font-size: x-large;
-	font-weight: 900;
-	font-stretch: normal;
-	font-style: normal;
-	line-height: 1.57;
-	letter-spacing: normal;
-	color: #303e9f;
 }
 
 .paragraph {
@@ -604,13 +679,35 @@ footer {
 		font-size: medium;
 	}
 
-	.logo-small {
-		width: 130px;
-	}
-
-	.my-container {
+	.body-container {
 		padding: 0 100px;
 	}
+
+	.intro-container {
+		margin: 80px 0;
+	}
+
+	.intro-logo-image {
+		width: 90px;
+	}
+
+	.intro-logo-title {
+		font-size: 28px;
+	}
+
+	.intro-description-container {
+		margin: 0 50px;
+	}
+
+	.intro-description {
+		font-size: 13px;
+		line-height: 35px;
+	}
+
+	.intro-description-button {
+		font-size: 16px;
+	}
+
 
 	.underline-word {
 		margin-top: 6px;
@@ -690,7 +787,7 @@ footer {
 		background-color: #313fa0 !important;
 	}
 
-	.my-container {
+	.body-container {
 		padding: 0 50px;
 	}
 
@@ -704,6 +801,44 @@ footer {
 		line-height: 1.6;
 		letter-spacing: normal;
 	}
+
+
+	.intro-container {
+		margin: 70px 0;
+	}
+
+	.intro-logo-image {
+		width: 80px;
+	}
+
+	.intro-logo-title {
+		font-size: 24px;
+		margin-top: 10px;
+	}
+
+	.intro-description-container {
+		margin: 0 30px;
+	}
+
+	.intro-description {
+		font-size: 12px;
+		line-height: 35px;
+		margin-bottom: 30px;
+	}
+
+	.intro-description-button {
+		width: 160px;
+		font-size: 10px;
+	}
+
+	.intro-motto-title {
+		font-size: 18px;
+	}
+
+	.intro-motto-description {
+		font-size: 10px;
+	}
+
 
 	.responsive-image {
 		width: 294px;
@@ -797,11 +932,6 @@ footer {
 		font-size: small;
 	}
 
-	.logo-small {
-		width: 100px;
-		/*height: 119px;*/
-	}
-
 	.paragraph {
 		line-height: 2.57;
 		letter-spacing: -0.5px;
@@ -874,6 +1004,40 @@ footer {
 		font-size: small;
 	}
 
+
+	.intro-container {
+		margin: 50px 0;
+	}
+
+	.intro-logo-image {
+		width: 60px;
+	}
+
+	.intro-logo-title {
+		font-size: 18px;
+	}
+
+	.intro-description {
+		font-size: 10px;
+		line-height: 30px;
+	}
+
+	.intro-description-button {
+		width: 130px;
+		padding: 8px 0;
+		font-size: 9px;
+	}
+
+	.intro-motto-title {
+		font-size: 15px;
+		margin-bottom: 8px;
+	}
+
+	.intro-motto-description {
+		font-size: 9px;
+	}
+
+
 	footer li {
 		padding: 7px 0;
 		font-size: 9px !important;
@@ -898,11 +1062,6 @@ footer {
 
 	}
 
-	.logo-small {
-		width: 80px;
-		height: fit-content;
-	}
-
 	main .nav-title {
 		font-size: x-large;
 	}
@@ -913,10 +1072,6 @@ footer {
 
 	.intro-title {
 		font-size: large;
-	}
-
-	.intro-description {
-		font-size: x-small;
 	}
 
 	.lesson-title {
@@ -959,11 +1114,11 @@ footer {
 		padding: 10px 27px !important;
 	}
 
-	.primary-nav .nav-title{
+	.primary-nav .nav-title {
 		font-size: x-large;
 	}
 
-	.SEPAHKAR{
+	.SEPAHKAR {
 		font-weight: 500;
 	}
 
@@ -971,7 +1126,7 @@ footer {
 		padding: 0 !important;
 	}
 
-	.my-container {
+	.body-container {
 		padding: 0 30px;
 	}
 
@@ -995,7 +1150,7 @@ footer {
 	}
 
 	.primary-nav {
-		font-size: medium ;
+		font-size: medium;
 	}
 
 	.primary-nav i {
@@ -1157,12 +1312,12 @@ footer {
 		font-size: small;
 	}
 
-	.logo-small {
+	.intro-logo-image {
 		width: 110px;
 		height: fit-content;
 	}
 
-	.sm-align-middle {
+	.intro-container {
 		align-items: center;
 	}
 

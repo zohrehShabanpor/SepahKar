@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>سپه کار - تولید کننده ماشین آلات تولید نان و شیرینی</title>
+
+	<style>
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 700;
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_Bold.eot');
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/woff2/IRANSansWeb(FaNum)_Bold.woff2') format('woff2'), url('assets/fonts/woff/IRANSansWeb(FaNum)_Bold.woff') format('woff'), url('assets/fonts/ttf/IRANSansWeb(FaNum)_Bold.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 500;
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_Medium.eot');
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_Medium.eot?#iefix') format('embedded-opentype'), url('assets/fonts/woff2/IRANSansWeb(FaNum)_Medium.woff2') format('woff2'), url('assets/fonts/woff/IRANSansWeb(FaNum)_Medium.woff') format('woff'), url('assets/fonts/ttf/IRANSansWeb(FaNum)_Medium.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 300;
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_Light.eot');
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_Light.eot?#iefix') format('embedded-opentype'), url('assets/fonts/woff2/IRANSansWeb(FaNum)_Light.woff2') format('woff2'), url('assets/fonts/woff/IRANSansWeb(FaNum)_Light.woff') format('woff'), url('assets/fonts/ttf/IRANSansWeb(FaNum)_Light.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 200;
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot');
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum)_UltraLight.eot?#iefix') format('embedded-opentype'), url('assets/fonts/woff2/IRANSansWeb(FaNum)_UltraLight.woff2') format('woff2'), url('assets/fonts/woff/IRANSansWeb(FaNum)_UltraLight.woff') format('woff'), url('assets/fonts/ttf/IRANSansWeb(FaNum)_UltraLight.ttf') format('truetype')
+		}
+
+		@font-face {
+			font-family: IRANSans;
+			font-style: normal;
+			font-weight: 400;
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum).eot');
+			src: url('assets/fonts/eot/IRANSansWeb(FaNum).eot?#iefix') format('embedded-opentype'), url('assets/fonts/woff2/IRANSansWeb(FaNum).woff2') format('woff2'), url('assets/fonts/woff/IRANSansWeb(FaNum).woff') format('woff'), url('assets/fonts/ttf/IRANSansWeb(FaNum).ttf') format('truetype')
+		}
+
+		body {
+			font-family: IRANSans !important;
+			font-weight: 300;
+			direction: rtl;
+			margin: 0;
+			overflow-x: hidden !important;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6,
+		input,
+		td,
+		textarea,
+		th {
+			font-family: IRANSans !important;
+		}
+
+		.blue-nav {
+			background-color: #01247e;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			font-size: 13px;
+			padding: 20px 120px 20px 80px;
+		}
+
+		.white-nav {
+			color: #01247e;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 11px 90px;
+		}
+
+		.nav-logo-container {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 40px 20px 40px 0;
+		}
+
+		.nav-logo {
+			width: 100px;
+			object-fit: contain;
+		}
+
+		.nav-SEPAHKAR-en {
+			font-weight: 400;
+			font-size: 20px;
+		}
+
+		.nav-SEPAHKAR-fa {
+			font-size: 34px;
+			font-weight: 500;
+			letter-spacing: 2px;
+		}
+
+		.nav-burger-menu-mobile {
+			display: none;
+		}
+
+		.nav-list {
+			list-style: none;
+			color: #01247e;
+			padding: 0;
+		}
+
+		.nav-list li {
+			display: inline;
+			font-weight: 600;
+			padding: 5px 20px;
+			font-size: 16px;
+		}
+
+		.nav-search-container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.nav-input-container {
+			padding: 10px 15px;
+			border-radius: 2px;
+			background-color: #01247e;
+			border: none;
+			color: #ffffff;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.nav-search-input,
+		.nav-search-input:focus {
+			outline: 0;
+			font-size: 15px;
+			background-color: #01247e;
+			padding-left: 15px;
+			border: none;
+			color: #ffffff;
+			flex-grow: 1;
+		}
+
+		.nav-search-input::placeholder {
+			color: #fff;
+			border-width: 0;
+		}
+
+		.nav-language {
+			color: #4a4a4a;
+			width: fit-content;
+			align-self: end;
+			font-weight: 700;
+			font-size: 13px;
+			margin-top: 22px;
+		}
+
+		.nav-search-container-tablet {
+			display: none;
+		}
+
+		.nav-title-container {
+			display: flex;
+			flex-direction: column;
+			margin: 0 1.5rem;
+			justify-content: center;
+		}
+
+		.body-container {
+			padding-right: 150px;
+			padding-left: 150px;
+		}
+
+		@media screen and (max-width: 1200px) {
+			/*	------------	header	------------	*/
+			.blue-nav {
+				font-size: 14px;
+			}
+
+			.white-nav {
+				padding: 10px 70px;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 16px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 30px;
+			}
+
+			.nav-list li {
+				display: inline;
+				font-weight: 600;
+				padding: 5px 10px;
+				font-size: 13px;
+			}
+
+			.nav-search-input {
+				font-size: 14px;
+			}
+
+			.nav-language {
+				font-size: 12px;
+				margin-top: 19px;
+			}
+
+			/*	------------	header	------------	*/
+			.body-container {
+				padding-right: 120px;
+				padding-left: 120px;
+			}
+		}
+
+		@media screen and (max-width: 992px) {
+			.blue-nav {
+				font-size: 13px;
+				padding: 13px 130px 13px 70px;
+			}
+
+			.white-nav {
+				justify-content: center;
+				padding: 10px 30px;
+			}
+
+			.nav-search-container {
+				display: none;
+			}
+
+			.nav-search-container-tablet {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-grow: 0.5;
+			}
+
+			.nav-language {
+				margin-top: 0;
+				align-self: center;
+				font-size: 11px;
+			}
+
+			.nav-logo-container {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 30px 20px;
+				width: 100%;
+			}
+
+			.nav-list {
+				display: none;
+			}
+
+			.nav-burger-menu-tablet {
+				font-size: 30px;
+				display: flex;
+			}
+
+			.nav-logo {
+				width: 90px;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 16px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 29px;
+			}
+
+			.nav-input-container {
+				padding: 5px 15px;
+				background-color: #313fa0;
+				height: fit-content;
+			}
+
+			.nav-search-input,
+			.nav-search-input:focus {
+				background-color: #313fa0;
+				padding-left: 10px;
+			}
+
+			.body-container {
+				padding-right: 60px;
+				padding-left: 60px;
+			}
+		}
+
+		@media screen and (max-width: 768px) {
+			.blue-nav {
+				font-size: 12px;
+				padding: 10px 100px 10px 60px;
+			}
+
+			.white-nav {
+				padding: 8px 20px;
+			}
+
+			.nav-search-container-tablet {
+				flex-grow: 0.7;
+			}
+
+			.nav-language {
+				font-size: 8px;
+			}
+
+			.nav-logo-container {
+				padding: 25px 5px;
+			}
+
+			.nav-logo {
+				width: 70px;
+			}
+
+			.nav-title-container {
+				margin: 0 1rem;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 13px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 22px;
+			}
+
+			.nav-input-container {
+				padding: 5px 8px;
+			}
+
+			.nav-search-input,
+			.nav-search-input:focus {
+				padding-left: 2px;
+			}
+
+			.nav-burger-menu-tablet {
+				font-size: 27px;
+			}
+
+			.body-container {
+				padding-right: 50px;
+				padding-left: 50px;
+			}
+		}
+
+		@media screen and (max-width: 576px) {
+			/*	------------	header	------------	*/
+			.blue-nav {
+				font-size: 10px;
+				padding: 8px 30px;
+			}
+
+			.white-nav {
+				flex-direction: column;
+				justify-content: space-between;
+				margin: 15px 30px;
+				padding: 0 0 35px 0;
+			}
+
+			.nav-logo-container {
+				align-items: center;
+				justify-content: space-between;
+				padding: 10px 0;
+			}
+
+			.nav-logo {
+				width: 70px;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 12px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 24px;
+			}
+
+			.nav-title-container {
+				margin: 0 0.5rem;
+			}
+
+			.nav-burger-menu-mobile {
+				display: flex;
+				font-size: 30px;
+				color: #313fa0;
+			}
+
+			.nav-search-container {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+				margin-top: 20px;
+				padding: 0;
+			}
+
+			.nav-input-container {
+				padding: 10px 15px;
+				border-radius: 2px;
+				background-color: #313fa0;
+			}
+
+			.nav-search-input,
+			.nav-search-input:focus {
+				background-color: #313fa0;
+				padding-left: 10px;
+				font-size: 17px;
+			}
+
+			.nav-language {
+				align-self: end;
+				font-size: 10px;
+				margin-top: 15px;
+			}
+
+			.nav-search-container-tablet {
+				display: none;
+			}
+
+			/*	------------	header	------------	*/
+			.body-container {
+				padding-right: 50px;
+				padding-left: 50px;
+			}
+		}
+	</style>
+
+	<link rel="preload"
+		  href="./styles.css"
+		  as="style"
+		  onload="this.rel='stylesheet'"/>
+	<link rel="preload"
+		  href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+		  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+		  crossorigin="anonymous"
+		  as="style"
+		  onload="this.rel='stylesheet'"/>
+	<link rel="preload"
+		  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+		  as="style"
+		  onload="this.rel='stylesheet'"/>
+
+	<script rel="preload"
+			async
+			src="../js/collapse.js"></script>
+	<script rel="preload"
+			async
+			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+			integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+			crossorigin="anonymous"
+	></script>
+	<script rel="preload"
+			async
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+			crossorigin="anonymous"
+	></script>
+</head>
+<body>
+<header>
+	<nav class="blue-nav">
+        <span class="pe-lg-5">
+          09134047020
+          <i class="fas fa-mobile-alt fa-lg mx-2"></i>
+          (مهدی)
+        </span>
+		<span class="ps-lg-5">
+          031-33804882-5
+          <i class="fas fa-phone-alt me-1"></i>
+        </span>
+	</nav>
+	<nav class="white-nav">
+		<div class="nav-logo-container">
+			<div style="display: flex">
+				<img class="nav-logo" src="assets/images/logo.png" alt="لوگو سپه کار"/>
+				<div class="nav-title-container">
+					<span class="nav-SEPAHKAR-en"> SEPAHKAR </span>
+					<h1 class="nav-SEPAHKAR-fa">سپه کار</h1>
+				</div>
+			</div>
+			<div class="nav-search-container-tablet">
+				<div class="nav-input-container">
+					<input class="nav-search-input" placeholder="جستجو"/>
+					<img class="nav-search-icon" src="assets/icons/search-normal.png">
+				</div>
+				<small class="nav-language"> فارسی | English </small>
+				<span class="nav-burger-menu-tablet"
+					  data-bs-toggle="offcanvas"
+					  data-bs-target="#offcanvasExample"
+					  aria-controls="offcanvasExample">
+            		<i class="fas fa-bars"></i>
+          		</span>
+			</div>
+			<span class="nav-burger-menu-mobile"
+				  data-bs-toggle="offcanvas"
+				  data-bs-target="#offcanvasExample"
+				  aria-controls="offcanvasExample">
+				<i class="fas fa-bars"></i>
+			</span>
+		</div>
+		<ul class="nav-list">
+			<li>
+				خانه
+			</li>
+			<li class="dropdown-toggle">
+				محصولات
+			</li>
+			<li>
+				وبلاگ
+			</li>
+			<li>
+				تماس با ما
+			</li>
+			<li>
+				درباره ما
+			</li>
+		</ul>
+		<div class="nav-search-container">
+			<div class="nav-input-container">
+				<input class="nav-search-input" placeholder="جستجو"/>
+				<img alt="سپه کار" class="nav-search-icon" src="assets/icons/search-normal.png">
+			</div>
+			<small class="nav-language"> فارسی | English </small>
+		</div>
+	</nav>
+	<div class="nav-drawer offcanvas offcanvas-end"
+		 tabindex="-1"
+		 id="offcanvasExample"
+		 aria-labelledby="offcanvasExampleLabel">
+		<div class="offcanvas-header py-0">
+			<span class="offcanvas-title"
+				  id="offcanvasExampleLabel">
+				خانه
+			</span>
+			<button type="button"
+					class="btn-close text-light"
+					data-bs-dismiss="offcanvas"
+					aria-label="Close"></button>
+		</div>
+		<div class="offcanvas-body">
+			<span data-bs-toggle="collapse"
+				  data-bs-target="#product-list"
+				  aria-expanded="false"
+				  aria-controls="product-list">
+				محصولات
+				<i class="dropdown-toggle mx-2"></i>
+			</span>
+			<div class="collapse text-light mb-5" id="product-list">
+				<hr/>
+				<span>-  میکسر اسپیرال</span>
+				<span>-  میکسر قنادی</span>
+				<span>-  خمیرگیر</span>
+				<span>-  قیف زن</span>
+				<span>-  محصولات ویژه</span>
+			</div>
+			<span>وبلاگ</span>
+			<span>تماس با ما</span>
+			<span>درباره ما</span>
+		</div>
+	</div>
+</header>
+<main>
+	<section>
+		<div class="carousel slide"
+			 id="carousel"
+			 data-bs-ride="carousel">
+			<button class="carousel-control-prev"
+					type="button"
+					data-bs-target="#carousel"
+					data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"
+					  aria-hidden="true">
+				</span>
+				<span class="visually-hidden">
+					Previous
+				</span>
+			</button>
+			<button class="carousel-control-next"
+					type="button"
+					data-bs-target="#carousel"
+					data-bs-slide="next">
+				<span class="carousel-control-next-icon"
+					  aria-hidden="true">
+				</span>
+				<span class="visually-hidden">
+					Next
+				</span>
+			</button>
+			<div class="carousel-inner">
+				<div class="slider-shadow-tablet"></div>
+				<ul class="tablet-nav-list">
+					<li>
+						خانه
+					</li>
+					<li class="dropdown-toggle">
+						محصولات
+					</li>
+					<li>
+						وبلاگ
+					</li>
+					<li>
+						تماس با ما
+					</li>
+					<li>
+						درباره ما
+					</li>
+				</ul>
+				<div class="carousel-item active">
+					<img class="main-banner" alt="mixer" src="assets/images/Slider-planetary-mixer.jpg"/>
+				</div>
+				<div class="carousel-item">
+					<img class="main-banner" alt="mixer" src="assets/images/Slider-spiral-mixer.jpg"/>
+				</div>
+				<div class="carousel-item">
+					<img class="main-banner" alt="mixer" src="assets/images/Slider-mixer.jpg"/>
+				</div>
+			</div>
+		</div>
+		<img class="main-banner-xs" alt="mixer" src="assets/images/Slider-spiral-mixer.jpg"/>
+	</section>
+	<section class="body-container">
+		<div class="intro-container">
+			<div class="intro-logo-container">
+				<img class="intro-logo-image" src="assets/images/logo.png" alt="لوگو سپه کار"/>
+				<h2 class="intro-logo-title">سپه کار</h2>
+			</div>
+			<div class="intro-description-container">
+				<div class="intro-description">
+					در صنعــت ماشیــن آلات تولیـــد نان و شیرینی نام سپـه کار هـــمـــواره یادآور کیفیت و دوام بوده
+					است.در
+					این سالیان متـمـادی رضـایت مشتریان تبدیل به سرمایه ای شده اســت بـــی بدیل و پشتـوانــه ای قوی برای
+					انتـخـاب مطمئــن محصولات سپه کار
+				</div>
+				<button class="intro-description-button secondary-color">بیشتر بدانیم</button>
+			</div>
+			<div class="intro-catalog-container">
+				<div class="intro-motto-container">
+					<p class="intro-motto-title">بیش از نیم قرن تجربه</p>
+					<p class="intro-motto-description">محصولات با کیفیت برای کار مداوم</p>
+				</div>
+				<button class="intro-description-button primary-color d-none d-sm-block">دانلود کاتالوگ محصولات</button>
+			</div>
+		</div>
+		<div class="intro-container-mobile">
+			<div class="intro-description">
+				در صنعــت ماشیــن آلات تولیـــد نان و شیرینی نام سپـه کار هـــمـــواره یادآور کیفیت و دوام بوده است.در
+				این سالیان متـمـادی رضـایت مشتریان تبدیل به سرمایه ای شده اســت بـــی بدیل و پشتـوانــه ای قوی برای
+				انتـخـاب مطمئــن محصولات سپه کار
+			</div>
+			<div class="intro-button-container">
+				<button class="intro-description-button secondary-color">بیشتر بدانیم</button>
+				<button class="intro-description-button primary-color">دانلود کاتالوگ محصولات</button>
+			</div>
+		</div>
+	</section>
+	<section class="body-container product-section">
+		<div class="product-header-mobile">
+			<strong class="primary-title">میکسر قنادی</strong>
+			<div class="underline-word"></div>
+		</div>
+		<div class="product-container row">
+			<div class="product-image-container col-sm-5">
+				<img class="product-image" alt="mixer" src="assets/images/1-planetary-mixer.jpg">
+			</div>
+			<div class="product-description-container col-sm-7">
+				<div class="product-header">
+					<strong class="primary-title">میکسر قنادی</strong>
+					<div class="underline-word"></div>
+				</div>
+				<p class="product-description">
+					لورم ایپــسوم متن ساختــگی با تولیـد ســادگی نامفهــوم از صنعــت چاپ، و با استفاده از طراحان گرافیک
+					است، چاپگرها و متون بلکه روزنامه و مجله در ستون
+				</p>
+				<button class="product-button tertiary-color">
+					اطلاعات بیشتر
+					<img class="button-icon" alt="" src="assets/icons/arrow-left.svg">
+				</button>
+			</div>
+		</div>
+		<div class="product-header-mobile">
+			<strong class="primary-title">میکسر قنادی</strong>
+			<div class="underline-word"></div>
+		</div>
+		<div class="product-container row">
+			<div class="product-description-container col-sm-7">
+				<div class="product-header">
+					<strong class="primary-title">میکسر قنادی</strong>
+					<div class="underline-word"></div>
+				</div>
+				<p class="product-description">
+					لورم ایپــسوم متن ساختــگی با تولیـد ســادگی نامفهــوم از صنعــت چاپ، و با استفاده از طراحان گرافیک
+					است، چاپگرها و متون بلکه روزنامه و مجله در ستون
+				</p>
+				<button class="product-button primary-color">
+					اطلاعات بیشتر
+					<img class="button-icon" alt="" src="assets/icons/arrow-left_3.png">
+				</button>
+			</div>
+			<div class="product-image-container col-sm-5">
+				<img class="product-image" alt="mixer" src="assets/images/1-planetary-mixer.jpg">
+			</div>
+		</div>
+		<div class="product-header-mobile">
+			<strong class="primary-title">میکسر قنادی</strong>
+			<div class="underline-word"></div>
+		</div>
+		<div class="product-container row">
+			<div class="product-image-container col-sm-5">
+				<img class="product-image" alt="mixer" src="assets/images/1-planetary-mixer.jpg">
+			</div>
+			<div class="product-description-container col-sm-7">
+				<div class="product-header">
+					<strong class="primary-title">میکسر قنادی</strong>
+					<div class="underline-word"></div>
+				</div>
+				<p class="product-description">
+					لورم ایپــسوم متن ساختــگی با تولیـد ســادگی نامفهــوم از صنعــت چاپ، و با استفاده از طراحان گرافیک
+					است، چاپگرها و متون بلکه روزنامه و مجله در ستون
+				</p>
+				<button class="product-button tertiary-color">
+					اطلاعات بیشتر
+					<img class="button-icon" alt="" src="assets/icons/arrow-left.svg">
+				</button>
+			</div>
+		</div>
+		<div class="product-header-mobile">
+			<strong class="primary-title">میکسر قنادی</strong>
+			<div class="underline-word"></div>
+		</div>
+		<div class="product-container row mb-0">
+			<div class="product-description-container col-sm-7">
+				<div class="product-header">
+					<strong class="primary-title">میکسر قنادی</strong>
+					<div class="underline-word"></div>
+				</div>
+				<p class="product-description">
+					لورم ایپــسوم متن ساختــگی با تولیـد ســادگی نامفهــوم از صنعــت چاپ، و با استفاده از طراحان گرافیک
+					است، چاپگرها و متون بلکه روزنامه و مجله در ستون
+				</p>
+				<button class="product-button tertiary-color">
+					اطلاعات بیشتر
+					<img class="button-icon" alt="" src="assets/icons/arrow-left.svg">
+				</button>
+			</div>
+			<div class="product-image-container col-sm-5">
+				<img class="product-image" alt="mixer" src="assets/images/1-planetary-mixer.jpg">
+			</div>
+		</div>
+	</section>
+	<section class="body-container contact-section">
+		<img class="contact-image" alt="" src="assets/images/contact_us.png">
+		<div class="contact-info-container">
+			<span class="contact-title-1">
+				با ما در تمـاس باشید
+			</span>
+			<span class="contact-title-2">
+				پاسخگوی صــدای گرمتـان هستیم
+			</span>
+			<span class="contact-title-3">
+				تلفن پاسخگویی
+			</span>
+			<button class="contact-button secondary-color">
+				<span style="color: #7e7e7e">031</span>-33804882-5
+			</button>
+		</div>
+	</section>
+	<section class="line-pic-container">
+		<img class="line-customers-image"
+			 alt="نظرات مشتریان"
+			 src="assets/images/Customers.PNG"/>
+		<div class="body-thin-line"></div>
+	</section>
+	<section class="body-container comment-container">
+		<div class="comment-header">
+			<h3 class="primary-title"><strong>نظر خریداران میکسر قنادی سپه کار</strong></h3>
+			<div class="underline-word"></div>
+		</div>
+		<div class="comment-body carousel slide"
+			 id="carousel2"
+			 data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button
+						type="button"
+						data-bs-target="#carousel2"
+						data-bs-slide-to="0"
+						class="active"
+						aria-current="true"
+						aria-label="Slide 1"
+				></button>
+				<button
+						type="button"
+						data-bs-target="#carousel2"
+						data-bs-slide-to="1"
+						aria-label="Slide 2"
+				></button>
+				<button
+						type="button"
+						data-bs-target="#carousel2"
+						data-bs-slide-to="2"
+						aria-label="Slide 3"
+				></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<div class="comment-slide-header">
+						کافه نان گروس - آقای ابراهیمی
+					</div>
+					<div class="comments-slide-body">
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+						چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="comment-slide-header">
+						کافه نان گروس - آقای ابراهیمی
+					</div>
+					<div class="comments-slide-body">
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+						چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+					</div>
+				</div>
+				<div class="carousel-item">
+					<div class="comment-slide-header">
+						کافه نان گروس - آقای ابراهیمی
+					</div>
+					<div class="comments-slide-body">
+						لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
+						چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="line-pic-container">
+		<img class="line-learn-image"
+			 alt="نظرات مشتریان"
+			 src="assets/images/learn.png"/>
+		<div class="body-thin-line"></div>
+	</section>
+	<section class="body-container lesson-section">
+		<div class="lessons-container row">
+			<div class="lesson-body col-12 col-sm-4">
+				<div class="lesson-shadow">
+					<img class="lesson-image"
+						 src="assets/images/nutritional-bread.jpg"
+						 alt="">
+					<div class="lesson-title">
+						ارزش غذایی نان و روش‌های افزایش آن
+					</div>
+					<p class="lesson-description">
+						امروزه نان و سایر محصولات حاوی غلات، به بخش جدایی ناپذیری از رژیم‌های غذایی مختلف در سراسر جهان
+						تبدیل شده است
+					</p>
+				</div>
+			</div>
+			<div class="lesson-body col-12 col-sm-4">
+				<div class="lesson-shadow">
+					<img class="lesson-image"
+						 src="assets/images/nutritional-bread.jpg"
+						 alt="">
+					<div class="lesson-title">
+						ارزش غذایی نان و روش‌های افزایش آن
+					</div>
+					<p class="lesson-description">
+						امروزه نان و سایر محصولات حاوی غلات، به بخش جدایی ناپذیری از رژیم‌های غذایی مختلف در سراسر جهان
+						تبدیل شده است
+					</p>
+				</div>
+			</div>
+			<div class="lesson-body col-12 col-sm-4">
+				<div class="lesson-shadow">
+					<img class="lesson-image"
+						 src="assets/images/nutritional-bread.jpg"
+						 alt="">
+					<div class="lesson-title">
+						ارزش غذایی نان و روش‌های افزایش آن
+					</div>
+					<p class="lesson-description">
+						امروزه نان و سایر محصولات حاوی غلات، به بخش جدایی ناپذیری از رژیم‌های غذایی مختلف در سراسر جهان
+						تبدیل شده است
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</main>
+</body>
+</html>
