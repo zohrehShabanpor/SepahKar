@@ -123,6 +123,7 @@
 			font-weight: 600;
 			padding: 5px 20px;
 			font-size: 16px;
+			cursor: pointer;
 		}
 
 		.nav-search-container {
@@ -175,6 +176,10 @@
 			flex-direction: column;
 			margin: 0 1.5rem;
 			justify-content: center;
+		}
+
+		.tablet-nav-list, .carousel-control-next, .carousel-control-prev, .nav-drawer, .dropdown-menu {
+			display: none;
 		}
 
 		.body-container {
@@ -345,6 +350,10 @@
 				padding-left: 2px;
 			}
 
+			.nav-search-icon {
+				width: 18px;
+			}
+
 			.nav-burger-menu-tablet {
 				font-size: 27px;
 			}
@@ -366,7 +375,7 @@
 				flex-direction: column;
 				justify-content: space-between;
 				margin: 15px 30px;
-				padding: 0 0 35px 0;
+				padding: 0;
 			}
 
 			.nav-logo-container {
@@ -381,10 +390,12 @@
 
 			.nav-SEPAHKAR-en {
 				font-size: 12px;
+				font-weight: 500;
 			}
 
 			.nav-SEPAHKAR-fa {
 				font-size: 24px;
+				margin: 0;
 			}
 
 			.nav-title-container {
@@ -434,6 +445,75 @@
 				padding-left: 50px;
 			}
 		}
+
+		@media screen and (max-width: 400px) {
+			/*	------------	header	------------	*/
+			.blue-nav {
+				font-size: 8px;
+				padding: 8px 20px;
+			}
+
+			.white-nav {
+				margin: 15px 30px;
+			}
+
+			.nav-logo-container {
+				padding: 0;
+			}
+
+			.nav-logo {
+				width: 50px;
+			}
+
+			.nav-SEPAHKAR-en {
+				font-size: 10px;
+			}
+
+			.nav-SEPAHKAR-fa {
+				font-size: 15px;
+			}
+
+			.nav-title-container {
+				margin: 0 0.1rem;
+			}
+
+			.nav-burger-menu-mobile {
+				font-size: 18px;
+			}
+
+			.nav-search-container {
+				margin-top: 15px;
+			}
+
+			.nav-input-container {
+				padding: 7px 10px;
+				border-radius: 2px;
+			}
+
+			.nav-search-input,
+			.nav-search-input:focus {
+				padding-left: 3px;
+				font-size: 10px;
+			}
+
+			.nav-search-icon {
+				width: 15px;
+			}
+
+			.nav-language {
+				font-size: 7px;
+				margin-top: 10px;
+			}
+
+			/*	------------	header	------------	*/
+			/*	------------	main	------------	*/
+			.body-container {
+				padding-left: 30px;
+				padding-right: 30px;
+			}
+
+			/*	------------	main	------------	*/
+		}
 	</style>
 
 	<link rel="preload"
@@ -450,10 +530,14 @@
 		  href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
 		  as="style"
 		  onload="this.rel='stylesheet'"/>
+	<link rel="preload"
+		  href="assets/images/logo.png"
+		  sizes="32x32"
+		  onload="this.rel='icon'">
 
 	<script rel="preload"
 			async
-			src="../js/collapse.js"></script>
+			src="js/collapse.js"></script>
 	<script rel="preload"
 			async
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -483,7 +567,9 @@
 	<nav class="white-nav">
 		<div class="nav-logo-container">
 			<div style="display: flex">
-				<img class="nav-logo" src="assets/images/logo.png" alt="لوگو سپه کار"/>
+				<a href="index.html">
+					<img class="nav-logo" src="assets/images/logo.png" alt="لوگو سپه کار"/>
+				</a>
 				<div class="nav-title-container">
 					<span class="nav-SEPAHKAR-en"> SEPAHKAR </span>
 					<h1 class="nav-SEPAHKAR-fa">سپه کار</h1>
@@ -513,9 +599,19 @@
 			<li>
 				خانه
 			</li>
-			<li class="dropdown-toggle">
+			<li class="dropdown-toggle"
+				id="dropdownMenu1"
+				data-bs-toggle="dropdown"
+				aria-expanded="false">
 				محصولات
 			</li>
+			<ul class="dropdown-menu"
+				aria-labelledby="dropdownMenu1">
+				<li><a class="dropdown-item secondary-color" href="mixer/index.html">میکسر قنادی</a></li>
+				<li><a class="dropdown-item secondary-color" href="./index.html">میکسر اسپیرال</a></li>
+				<li><a class="dropdown-item secondary-color" href="khamir/index.html">خمیرگیر</a></li>
+				<li><a class="dropdown-item secondary-color" href="./index.html">قیف زن</a></li>
+			</ul>
 			<li>
 				وبلاگ
 			</li>
@@ -526,6 +622,8 @@
 				درباره ما
 			</li>
 		</ul>
+
+
 		<div class="nav-search-container">
 			<div class="nav-input-container">
 				<input class="nav-search-input" placeholder="جستجو"/>
@@ -541,7 +639,7 @@
 		<div class="offcanvas-header py-0">
 			<span class="offcanvas-title"
 				  id="offcanvasExampleLabel">
-				خانه
+				<a href="index.html">خانه</a>
 			</span>
 			<button type="button"
 					class="btn-close text-light"
@@ -558,9 +656,9 @@
 			</span>
 			<div class="collapse text-light mb-5" id="product-list">
 				<hr/>
-				<span>-  میکسر اسپیرال</span>
-				<span>-  میکسر قنادی</span>
-				<span>-  خمیرگیر</span>
+				<span><a>-  میکسر اسپیرال</a></span>
+				<span><a href="mixer/index.html">-  میکسر قنادی</a></span>
+				<span><a href="khamir/category%20khamir.html">-  خمیرگیر</a></span>
 				<span>-  قیف زن</span>
 				<span>-  محصولات ویژه</span>
 			</div>
@@ -673,7 +771,7 @@
 			<div class="product-image-container col-sm-5">
 				<img class="product-image" alt="mixer" src="assets/images/1-planetary-mixer.jpg">
 			</div>
-			<div class="product-description-container col-sm-7">
+			<div class="product-description-container product-padding-right col-sm-7">
 				<div class="product-header">
 					<strong class="primary-title">میکسر قنادی</strong>
 					<div class="underline-word"></div>
@@ -689,13 +787,13 @@
 			</div>
 		</div>
 		<div class="product-header-mobile">
-			<strong class="primary-title">میکسر قنادی</strong>
+			<strong class="primary-title">میکسر اسپیرال</strong>
 			<div class="underline-word"></div>
 		</div>
 		<div class="product-container row">
-			<div class="product-description-container col-sm-7">
+			<div class="product-description-container product-padding-left col-sm-7">
 				<div class="product-header">
-					<strong class="primary-title">میکسر قنادی</strong>
+					<strong class="primary-title">میکسر اسپیرال</strong>
 					<div class="underline-word"></div>
 				</div>
 				<p class="product-description">
@@ -708,20 +806,20 @@
 				</button>
 			</div>
 			<div class="product-image-container col-sm-5">
-				<img class="product-image" alt="mixer" src="assets/images/1-planetary-mixer.jpg">
+				<img class="product-image" alt="mixer" src="assets/images/1-spiral-mixer.jpg">
 			</div>
 		</div>
 		<div class="product-header-mobile">
-			<strong class="primary-title">میکسر قنادی</strong>
+			<strong class="primary-title">خمیرگیر</strong>
 			<div class="underline-word"></div>
 		</div>
 		<div class="product-container row">
 			<div class="product-image-container col-sm-5">
-				<img class="product-image" alt="mixer" src="assets/images/1-planetary-mixer.jpg">
+				<img class="product-image" alt="mixer" src="assets/images/khamir.jpg">
 			</div>
-			<div class="product-description-container col-sm-7">
+			<div class="product-description-container product-padding-right col-sm-7">
 				<div class="product-header">
-					<strong class="primary-title">میکسر قنادی</strong>
+					<strong class="primary-title">خمیرگیر</strong>
 					<div class="underline-word"></div>
 				</div>
 				<p class="product-description">
@@ -735,13 +833,13 @@
 			</div>
 		</div>
 		<div class="product-header-mobile">
-			<strong class="primary-title">میکسر قنادی</strong>
+			<strong class="primary-title">قیف زن</strong>
 			<div class="underline-word"></div>
 		</div>
 		<div class="product-container row mb-0">
-			<div class="product-description-container col-sm-7">
+			<div class="product-description-container product-padding-left col-sm-7">
 				<div class="product-header">
-					<strong class="primary-title">میکسر قنادی</strong>
+					<strong class="primary-title">قیف زن</strong>
 					<div class="underline-word"></div>
 				</div>
 				<p class="product-description">
@@ -867,7 +965,7 @@
 			<div class="lesson-body col-12 col-sm-4">
 				<div class="lesson-shadow">
 					<img class="lesson-image"
-						 src="assets/images/nutritional-bread.jpg"
+						 src="assets/images/baking-bread5.jpg"
 						 alt="">
 					<div class="lesson-title">
 						ارزش غذایی نان و روش‌های افزایش آن
@@ -878,10 +976,10 @@
 					</p>
 				</div>
 			</div>
-			<div class="lesson-body col-12 col-sm-4">
+			<div class="lesson-body col-12 col-sm-4 mb-0">
 				<div class="lesson-shadow">
 					<img class="lesson-image"
-						 src="assets/images/nutritional-bread.jpg"
+						 src="assets/images/hobab1.jpg"
 						 alt="">
 					<div class="lesson-title">
 						ارزش غذایی نان و روش‌های افزایش آن
@@ -895,5 +993,102 @@
 		</div>
 	</section>
 </main>
+<footer>
+	<section class="footer-container row">
+		<div class="footer-col-container order-2 order-sm-1 col-12 col-sm-6">
+			<div class="footer-vertical-line"></div>
+			<div class="footer-first-col">
+				<div>
+					<div class="footer-primary-title">
+						<i class="fas fa-headset"></i>
+						خدمات مشتریان
+					</div>
+					<ul class="footer-list">
+						<li class="footer-list-item">
+							<i class="fas fa-circle"></i>
+							محصولات ما
+						</li>
+						<li class="footer-list-item">
+							<i class="fas fa-circle"></i>
+							خدمات پس از فروش
+						</li>
+						<li class="footer-list-item">
+							<i class="fas fa-circle"></i>
+							پاسخ به پرسش های متداول
+						</li>
+					</ul>
+				</div>
+				<div class="footer-thin-line"></div>
+				<div>
+					<div class="footer-primary-title">
+						<i class="far fa-credit-card"></i>
+						راهنمای خرید
+					</div>
+					<ul class="footer-list">
+						<li class="footer-list-item">
+							<i class="fas fa-circle"></i>
+							نحوه ثبت سفارش
+						</li>
+						<li class="footer-list-item">
+							<i class="fas fa-circle"></i>
+							رویه ارسال سفارش
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="footer-vertical-line"></div>
+		</div>
+		<div class="footer-col-container order-1 order-sm-2 col-12 col-sm-6">
+			<div class="footer-second-col">
+				<div class="footer-SEPAHKAR-container">
+					<div class="footer-logo-container">
+						<img class="footer-logo-image" src="assets/images/logo.png" alt="سپه کار"/>
+						<div class="footer-logo-header">
+							<h6 class="footer-SEPAHKAR-en">SEPAHKAR</h6>
+							<h1 class="footer-SEPAHKAR-fa">سپه کار</h1>
+						</div>
+					</div>
+					<div class="footer-motto-container">
+						<div class="footer-motto-fa">تولید کننده ماشین آلات تولید نان و شیرینی</div>
+						<span class="footer-motto-en">Producer of Bread Confectionery Products Machine</span>
+					</div>
+				</div>
+				<div class="footer-thin-line"></div>
+				<div class="footer-details-container">
+					<div>
+						<div class="footer-details-item">
+							<i class="fas fa-map-marker-alt"></i>
+							اصفهان، منطقه صنعتی محمودآباد (مقابل پالایشگاه نفت)، خیابان
+							شماره ۲۴، پلاک ۲۸
+						</div>
+						<div class="footer-details-item">
+							<i class="fas fa-phone"></i>
+							<span style="margin-left: 15px">تلفن تماس:</span>
+							031-33804882-5 / 09134047020
+						</div>
+						<div class="footer-details-item">
+							<i class="far fa-clock"></i>
+							8 صبح الی 5 بعدازظهر
+						</div>
+					</div>
+					<div class="footer-social-container">
+						<i class="fab fa-whatsapp"></i>
+						<i class="fab fa-linkedin-in"></i>
+						<i class="fab fa-telegram"></i>
+						<i class="fab fa-instagram"></i>
+					</div>
+				</div>
+				<div class="footer-thin-line d-block d-sm-none"></div>
+			</div>
+			<div class="footer-vertical-line"></div>
+		</div>
+	</section>
+	<section>
+		<div class="footer-separator-line"></div>
+		<div class="copy-right-container">
+			تمام حقوق این وب سایت متعلق به <span>شرکت سپه کار</span> است. ©
+		</div>
+	</section>
+</footer>
 </body>
 </html>

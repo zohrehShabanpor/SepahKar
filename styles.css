@@ -23,18 +23,24 @@ th, button {
 a {
 	font-family: IRANSans !important;
 	text-decoration: none !important;
+	color: #ffffff !important;
 }
 
 p {
 	font-family: IRANSans !important;
 }
 
+main, footer {
+	overflow-x: hidden;
+!important;
+}
 
+/*	------------	header	------------	*/
 .nav-drawer {
-	display: none;
-	padding: 46px 38px !important;
+	padding: 40px 30px !important;
 	color: #ffffff !important;;
 	background-color: #313fa0 !important;;
+	width: 70% !important;
 }
 
 .nav-drawer span {
@@ -46,16 +52,30 @@ p {
 
 .btn-close {
 	background-image: url("assets/icons/close.svg") !important;
+	width: 15px !important;
+	height: 15px !important;
+	padding: 0 !important;
+	object-fit: contain;
+	opacity: 1 !important;
 }
 
-.carousel-control-next, .carousel-control-prev {
-	width: 7%;
-	z-index: 2;
+.dropdown-toggle::after {
+	margin: 0;
+	vertical-align: 0;
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-	width: 20px;
+.dropdown-menu{
+	padding: 0!important;
+	text-align: start!important;
 }
+
+.dropdown-item{
+	padding: 0 20px!important;
+}
+
+/*	------------	header	------------	*/
+/*	------------	main	------------	*/
+/* ------  slider section  ------  */
 
 .slider-shadow-tablet {
 	display: none;
@@ -68,7 +88,6 @@ p {
 }
 
 .tablet-nav-list {
-	display: none;
 	width: 100%;
 	position: absolute;
 	z-index: 2;
@@ -76,13 +95,28 @@ p {
 	color: #ffffff;
 }
 
+.carousel-control-next, .carousel-control-prev {
+	width: 7% !important;
+	z-index: 2 !important;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+	width: 15px !important;
+}
+
 .main-banner {
 	width: 100%;
+	height: 65vh;
+	object-fit: cover;
+	object-position: left;
 }
 
 .main-banner-xs {
 	display: none;
 }
+
+/* ------  slider section  ------  */
+/* ------  intro section  ------  */
 
 .intro-container {
 	display: flex;
@@ -134,7 +168,7 @@ p {
 	font-size: 14px;
 	font-weight: 600;
 	align-self: end;
-	box-shadow: 0 7px 30px 2px rgba(7, 30, 91, 0.2);
+	box-shadow: 0 7px 30px 2px rgba(7, 30, 91, 0.1);
 }
 
 .intro-catalog-container {
@@ -172,7 +206,8 @@ p {
 	justify-content: center;
 }
 
-
+/* ------  intro section  ------  */
+/* ------  product section  ------  */
 .product-section {
 	background-color: #f2f2f2;
 	padding-top: 100px;
@@ -184,7 +219,7 @@ p {
 }
 
 .product-image-container {
-	padding: 20px;
+	padding: 0	;
 }
 
 .product-image {
@@ -207,7 +242,14 @@ p {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 0 50px;
+}
+
+.product-padding-right{
+	padding-right: 50px!important;
+}
+
+.product-padding-left{
+	padding-left: 50px!important;
 }
 
 .product-description {
@@ -222,7 +264,7 @@ p {
 .product-button {
 	width: fit-content;
 	padding: 16px 20px 16px 15px;
-	border-radius: 14px;
+	border-radius: 11px;
 	font-size: 13px;
 	font-weight: 600;
 	border: none;
@@ -233,7 +275,8 @@ p {
 	margin-right: 16px;
 }
 
-
+/* ------  product section  ------  */
+/* ------  contact section  ------  */
 .contact-section {
 	background-color: #00237d;
 	padding-top: 130px;
@@ -291,7 +334,8 @@ p {
 	margin-top: 20px;
 }
 
-
+/* ------  contact section  ------  */
+/* ------  line - customer section  ------  */
 .line-pic-container {
 	position: relative;
 	width: 100%;
@@ -308,6 +352,8 @@ p {
 	object-fit: contain;
 }
 
+/* ------  line - customer section  ------  */
+/* ------  comment section  ------  */
 .comment-container {
 	margin-top: 100px;
 	margin-bottom: 100px;
@@ -345,6 +391,8 @@ p {
 	width: 20px !important;
 }
 
+/* ------  comment section  ------  */
+/* ------  line - learn section  ------  */
 .line-learn-image {
 	width: 240px;
 	height: 240px;
@@ -354,6 +402,8 @@ p {
 	object-fit: contain;
 }
 
+/* ------  line - learn section  ------  */
+/* ------  lesson section  ------  */
 .lesson-section {
 	margin-bottom: 100px;
 }
@@ -391,6 +441,174 @@ p {
 	color: #989898;
 }
 
+/* ------  lesson section  ------  */
+/*	------------	main	------------	*/
+/*	------------	footer	------------	*/
+.footer-container {
+	background-color: #d2d3d5;
+	padding: 43px 180px;
+	overflow: hidden !important;
+}
+
+.footer-col-container {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0;
+}
+
+.footer-first-col {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+	padding: 50px 50px 50px 0;
+}
+
+.footer-second-col {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 50px 0;
+}
+
+.footer-primary-title {
+	font-size: 20px;
+	font-weight: 700;
+	color: #636363;
+	display: flex;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.footer-primary-title i {
+	font-size: 27px;
+	margin-left: 10px;
+}
+
+.footer-list {
+	text-align: right;
+}
+
+.footer-list-item {
+	font-weight: 500;
+	margin-top: 20px;
+	color: #565656;
+	list-style: none;
+	font-size: 15px;
+}
+
+.footer-list-item i {
+	font-size: 7px;
+	margin-left: 7px;
+}
+
+.footer-SEPAHKAR-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.footer-logo-container {
+	color: #00217c;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 30px;
+}
+
+.footer-logo-header {
+	display: flex;
+	flex-direction: column;
+	margin-right: 20px;
+}
+
+.footer-logo-image {
+	width: 90px;
+}
+
+.footer-SEPAHKAR-en {
+	font-weight: 400;
+	font-size: 16px;
+	margin: 0;
+}
+
+.footer-SEPAHKAR-fa {
+	font-size: 30px;
+	font-weight: 500;
+	letter-spacing: 2px;
+	margin: 0;
+}
+
+.footer-motto-container {
+	text-align: center;
+}
+
+.footer-motto-fa {
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 2px;
+	margin-bottom: 10px;
+	color: #090a0a;
+}
+
+.footer-motto-en {
+	font-size: 15px;
+	color: #5a5a5a;
+	font-weight: 500;
+}
+
+.footer-details-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+	color: #6b6969;
+	font-weight: 700;
+	text-align: start;
+	padding: 0 30px;
+}
+
+.footer-details-item {
+	margin-top: 20px;
+	font-size: 13px;
+	display: flex;
+	align-items: start;
+}
+
+.footer-details-item i {
+	font-size: 13px;
+	margin-left: 7px;
+	margin-top: 3px;
+}
+
+.footer-social-container {
+	align-self: center;
+	margin-top: 30px;
+}
+
+.footer-social-container i {
+	color: #6a6969;
+	padding: 1px;
+	border-radius: 5px;
+	border: solid 1px #6a6969;
+	font-size: 15px;
+	margin-right: 2px;
+}
+
+.copy-right-container {
+	font-size: 15px;
+	color: #090a0a;
+	font-weight: 600;
+	text-align: center;
+	padding: 40px 0 60px 0;
+}
+
+/*	------------	footer	------------	*/
+/*	------------	common	------------	*/
 
 .body-thin-line {
 	height: 1px;
@@ -418,8 +636,8 @@ p {
 }
 
 .secondary-color {
-	color: #01247e;
-	background-color: #ffffff;
+	color: #01247e!important;
+	background-color: #ffffff!important;
 }
 
 .tertiary-color {
@@ -427,13 +645,38 @@ p {
 	color: #a3a4aa;
 }
 
+.footer-separator-line {
+	width: 100%;
+	height: 12px;
+	background-color: #01247e;
+}
+
+.footer-thin-line {
+	height: 1px;
+	width: 90%;
+	background-color: #a1a1a1;
+	margin: 30px 0;
+	align-self: center;
+}
+
+.footer-vertical-line {
+	width: 1px;
+	background-color: #a1a1a1;
+	height: 100%;
+}
+
+/*	------------	common	------------	*/
+
 /*	screen lg	*/
 @media screen and (max-width: 1200px) {
-	.body-container {
-		padding-right: 120px;
-		padding-left: 120px;
+	/*	------------	main	------------	*/
+	/* ------  slider section  ------  */
+	.main-banner {
+		height: 60vh;
 	}
 
+	/* ------  intro section  ------  */
+	/* ------  intro section  ------  */
 	.intro-container {
 		margin: 90px 0;
 	}
@@ -469,6 +712,8 @@ p {
 		font-size: 12px;
 	}
 
+	/* ------  intro section  ------  */
+	/* ------  product section  ------  */
 	.product-section {
 		padding-top: 90px;
 		padding-bottom: 90px
@@ -486,8 +731,12 @@ p {
 		font-size: 24px;
 	}
 
-	.product-description-container {
-		padding: 0 40px;
+	.product-padding-right{
+		padding-right: 40px!important;
+	}
+
+	.product-padding-left{
+		padding-left: 40px!important;
 	}
 
 	.product-description {
@@ -500,6 +749,8 @@ p {
 		font-size: 11px;
 	}
 
+	/* ------  product section  ------  */
+	/* ------  line - learn section  ------  */
 	.line-learn-image {
 		width: 240px;
 		height: 240px;
@@ -509,6 +760,8 @@ p {
 		object-fit: contain;
 	}
 
+	/* ------  line - learn section  ------  */
+	/* ------  lesson section  ------  */
 	.lesson-body {
 		padding: 0 10px;
 	}
@@ -529,18 +782,95 @@ p {
 		line-height: 27px;
 	}
 
+	/* ------  lesson section  ------  */
+	/*	------------	main	------------	*/
+	/*	------------	footer	------------	*/
+	.footer-container {
+		padding: 43px 100px;
+	}
+
+	.footer-first-col {
+		padding: 50px 30px 50px 0;
+	}
+
+	.footer-second-col {
+		padding: 30px 0;
+	}
+
+	.footer-primary-title {
+		margin-bottom: 20px;
+	}
+
+	.footer-primary-title i {
+		font-size: 23px;
+	}
+
+	.footer-list-item {
+		margin-top: 15px;
+		font-size: 14px;
+	}
+
+	.footer-list-item i {
+		font-size: 8px;
+		margin-left: 7px;
+	}
+
+	.footer-logo-container {
+		margin-bottom: 20px;
+	}
+
+	.footer-logo-header {
+		margin-right: 15px;
+	}
+
+	.footer-logo-image {
+		width: 80px;
+	}
+
+	.footer-SEPAHKAR-en {
+		font-size: 15px;
+	}
+
+	.footer-SEPAHKAR-fa {
+		font-size: 26px;
+	}
+
+	.footer-motto-fa {
+		font-size: 15px;
+	}
+
+	.footer-motto-en {
+		font-size: 13px;
+	}
+
+	.footer-details-item {
+		margin-top: 17px;
+		font-size: 11px;
+	}
+
+	.footer-details-item i {
+		font-size: 13px;
+		margin-left: 3px;
+	}
+
+	.copy-right-container {
+		font-size: 13px;
+		padding: 20px 0 40px 0;
+	}
+
+	/*	------------	footer	------------	*/
+	/* ------  common  ------  */
 	.underline-word {
 		margin-top: 6px;
 	}
+
+	/* ------  common  ------  */
 }
 
 /*	screen md	*/
 @media screen and (max-width: 991px) {
-	.body-container {
-		padding-right: 60px;
-		padding-left: 60px;
-	}
-
+	/*	------------	main	------------	*/
+	/* ------  slider section  ------  */
 	.slider-shadow-tablet {
 		display: block;
 	}
@@ -556,11 +886,12 @@ p {
 		font-size: 16px;
 	}
 
-	.dropdown-toggle::after {
-		margin: 0;
-		vertical-align: 0;
+	.main-banner {
+		height: 55vh;
 	}
 
+	/* ------  slider section  ------  */
+	/* ------  intro section  ------  */
 	.intro-container {
 		margin: 70px 0;
 	}
@@ -597,6 +928,8 @@ p {
 		font-size: 10px;
 	}
 
+	/* ------  intro section  ------  */
+	/* ------  product section  ------  */
 	.product-section {
 		padding-top: 80px;
 		padding-bottom: 80px
@@ -614,8 +947,12 @@ p {
 		font-size: 20px;
 	}
 
-	.product-description-container {
-		padding: 0 30px;
+	.product-padding-right{
+		padding-right: 30px!important;
+	}
+
+	.product-padding-left{
+		padding-left: 30px!important;
 	}
 
 	.product-description {
@@ -633,6 +970,8 @@ p {
 		margin-right: 7px;
 	}
 
+	/* ------  product section  ------  */
+	/* ------  line - customer section  ------  */
 	.line-pic-container {
 		margin-top: 190px;
 		margin-bottom: 150px;
@@ -641,12 +980,13 @@ p {
 	.line-customers-image {
 		width: 300px;
 		height: 300px;
-		position: absolute;
 		left: calc(100% / 2 - 150px);
 		top: -155px;
 		padding: 0 20px;
 	}
 
+	/* ------  line - customer section  ------  */
+	/* ------  comment section  ------  */
 	.comment-container {
 		margin-top: 100px;
 	}
@@ -665,6 +1005,8 @@ p {
 		font-size: 17px;
 	}
 
+	/* ------  comment section  ------  */
+	/* ------  lesson section  ------  */
 	.lesson-body {
 		padding: 0 10px;
 	}
@@ -685,7 +1027,81 @@ p {
 		line-height: 24px;
 	}
 
+	/* ------  lesson section  ------  */
+	/*	------------	main	------------	*/
+	/*	------------	footer	------------	*/
+	.footer-container {
+		padding: 20px 100px;
+	}
 
+	.footer-primary-title {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+
+	.footer-primary-title i {
+		font-size: 20px;
+	}
+
+	.footer-list-item {
+		margin-top: 10px;
+		font-size: 12px;
+	}
+
+	.footer-list-item i {
+		font-size: 6px;
+		margin-left: 5px;
+	}
+
+	.footer-logo-header {
+		margin-right: 10px;
+	}
+
+	.footer-logo-image {
+		width: 60px;
+	}
+
+	.footer-SEPAHKAR-en {
+		font-size: 12px;
+	}
+
+	.footer-SEPAHKAR-fa {
+		font-size: 20px;
+	}
+
+	.footer-motto-fa {
+		font-size: 14px;
+		letter-spacing: 1px;
+		margin-bottom: 3px;
+	}
+
+	.footer-motto-en {
+		font-size: 11px;
+	}
+
+	.footer-details-item {
+		margin-top: 13px;
+		font-size: 10px;
+	}
+
+	.footer-details-item i {
+		font-size: 10px;
+	}
+
+	.footer-social-container i {
+		padding: 1px;
+		border-radius: 5px;
+		border: solid 1px #6a6969;
+		font-size: 12px;
+	}
+
+	.copy-right-container {
+		font-size: 12px;
+		padding: 20px 0 20px 0;
+	}
+
+	/*	------------	footer	------------	*/
+	/* ------  common  ------  */
 	.underline-word {
 		height: 4px;
 		width: 35px;
@@ -699,15 +1115,14 @@ p {
 	.body-thin-line {
 		margin: 80px 0;
 	}
+
+	/* ------  common  ------  */
 }
 
 /*	screen sm	*/
 @media screen and (max-width: 767px) {
-	.body-container {
-		padding-right: 50px;
-		padding-left: 50px;
-	}
-
+	/*	------------	main	------------	*/
+	/* ------  slider section  ------  */
 	.tablet-nav-list {
 		padding-top: 30px;
 	}
@@ -717,6 +1132,8 @@ p {
 		font-size: 12px;
 	}
 
+	/* ------  slider section  ------  */
+	/* ------  intro section  ------  */
 	.intro-container {
 		margin: 50px 0;
 	}
@@ -753,6 +1170,8 @@ p {
 		font-size: 9px;
 	}
 
+	/* ------  intro section  ------  */
+	/* ------  product section  ------  */
 	.product-section {
 		padding-top: 70px;
 		padding-bottom: 70px
@@ -768,6 +1187,14 @@ p {
 
 	.product-title {
 		font-size: 16px;
+	}
+
+	.product-padding-right{
+		padding-right: 20px!important;
+	}
+
+	.product-padding-left{
+		padding-left: 20px!important;
 	}
 
 	.product-description {
@@ -786,6 +1213,8 @@ p {
 		margin-right: 4px;
 	}
 
+	/* ------  product section  ------  */
+	/* ------  lesson section  ------  */
 	.lesson-body {
 		padding: 0 5px;
 	}
@@ -806,6 +1235,64 @@ p {
 		line-height: 20px;
 	}
 
+	/* ------  lesson section  ------  */
+	/*	------------	main	------------	*/
+	/*	------------	footer	------------	*/
+	.footer-container {
+		padding: 20px 50px;
+	}
+
+	.footer-primary-title {
+		font-size: 14px;
+	}
+
+	.footer-primary-title i {
+		font-size: 18px;
+	}
+
+	.footer-list-item {
+		margin-top: 10px;
+		font-size: 11px;
+		margin-right: -20px;
+	}
+
+	.footer-logo-image {
+		width: 50px;
+	}
+
+	.footer-SEPAHKAR-en {
+		font-size: 10px;
+	}
+
+	.footer-SEPAHKAR-fa {
+		font-size: 17px;
+	}
+
+	.footer-motto-fa {
+		font-size: 12px;
+		letter-spacing: normal;
+	}
+
+	.footer-motto-en {
+		font-size: 8px;
+	}
+
+	.footer-details-container {
+		padding: 0 20px;
+	}
+
+	.footer-details-item {
+		margin-top: 10px;
+		font-size: 9px;
+	}
+
+	.footer-details-item i {
+		font-size: 10px;
+		margin-left: 5px;
+	}
+
+	/*	------------	footer	------------	*/
+	/* ------  common  ------  */
 	.underline-word {
 		height: 4px;
 		width: 27px;
@@ -815,15 +1302,14 @@ p {
 	.primary-title {
 		font-size: 20px;
 	}
+
+	/* ------  common  ------  */
 }
 
 /*	screen xs	*/
 @media screen and (max-width: 575px) {
-	.body-container {
-		padding-right: 50px;
-		padding-left: 50px;
-	}
-
+	/*	------------	main	------------	*/
+	/* ------  banner section  ------  */
 	.main-banner-xs {
 		display: block;
 		width: 100%;
@@ -837,6 +1323,8 @@ p {
 		display: none;
 	}
 
+	/* ------  banner section  ------  */
+	/* ------  intro section  ------  */
 	.intro-container {
 		margin-top: 30px;
 		margin-bottom: 20px;
@@ -856,21 +1344,23 @@ p {
 		margin: 0 5px;
 	}
 
-
+	/* ------  intro section  ------  */
+	/* ------  product section  ------  */
 	.product-section {
 		padding-top: 50px;
-		padding-bottom: 50px
+		padding-bottom: 70px;
 	}
 
 	.product-container {
 		background-color: #ffffff;
 		display: flex;
 		flex-direction: column;
-		padding: 200px 25px 25px 25px;
+		padding: calc(30% + 40px) 25px 25px 25px;
 		border-radius: 25px;
 		position: relative;
-		margin-top: 130px;
+		margin-top: 130px !important;
 		margin-bottom: 80px;
+		box-shadow: 0 22px 31px 0 rgba(0, 0, 0, 0.03);
 	}
 
 	.product-header {
@@ -881,10 +1371,18 @@ p {
 		font-size: 20px;
 	}
 
+	.product-padding-right{
+		padding-right: 0!important;
+	}
+
+	.product-padding-left{
+		padding-left: 0!important;
+	}
+
 	.product-description {
 		font-size: 14px;
 		line-height: 35px;
-		margin-top: 50px;
+		margin-top: 20px;
 	}
 
 	.product-header-mobile {
@@ -917,16 +1415,34 @@ p {
 		border-radius: 16px;
 	}
 
-	.line-pic-container {
-		margin-top: 240px;
+	/* ------  product section  ------  */
+	/* ------  contact section  ------  */
+	.contact-section {
+		margin-bottom: 200px;
 	}
 
+	/* ------  contact section  ------  */
+	/* ------  line - customer section  ------  */
+	.line-pic-container {
+		margin-top: 150px;
+		margin-bottom: 100px;
+	}
+
+	.line-customers-image {
+		width: 250px;
+		height: 250px;
+		left: calc(100% / 2 - 125px);
+		top: -160px;
+		padding: 0 20px;
+	}
+
+	/* ------  line - customer section  ------  */
+	/* ------  comment section  ------  */
 	.comment-container {
 		margin-top: 0;
 	}
 
 	.comment-body {
-
 	}
 
 	.comment-slide-header {
@@ -941,6 +1457,144 @@ p {
 		font-size: 15px;
 	}
 
+	/* ------  comment section  ------  */
+	/* ------  lesson section  ------  */
+	.lesson-body {
+		padding: 0;
+		margin-bottom: 80px;
+	}
+
+	.lesson-shadow {
+		padding: 15px;
+		border-radius: 20px;
+		border: solid 3px #c2c2c2;
+		box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.11);
+	}
+
+	.lesson-title {
+		font-size: 18px;
+		margin-top: 20px;
+	}
+
+	.lesson-description {
+		margin-top: 10px;
+		margin-bottom: 30px;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 35px;
+	}
+
+	/* ------  lesson section  ------  */
+	/*	------------	main	------------	*/
+	/*	------------	footer	------------	*/
+	.footer-container {
+		padding: 35px 50px;
+	}
+
+	.footer-col-container {
+		padding: 0;
+	}
+
+	.footer-first-col {
+		align-items: start;
+		justify-content: center;
+		padding: 0;
+	}
+
+	.footer-second-col {
+		padding: 0;
+	}
+
+	.footer-primary-title {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+
+	.footer-primary-title i {
+		font-size: 23px;
+	}
+
+	.footer-list-item {
+		margin-top: 15px;
+		font-size: 15px;
+		margin-right: 0;
+	}
+
+	.footer-list-item i {
+		font-size: 10px;
+		margin-left: 10px;
+	}
+
+	.footer-logo-container {
+		margin-bottom: 30px;
+	}
+
+	.footer-logo-header {
+		margin-right: 15px;
+	}
+
+	.footer-logo-image {
+		width: 90px;
+	}
+
+	.footer-SEPAHKAR-en {
+		font-size: 18px;
+		font-weight: 500;
+	}
+
+	.footer-SEPAHKAR-fa {
+		font-size: 30px;
+		letter-spacing: 2px;
+	}
+
+	.footer-motto-fa {
+		font-size: 19px;
+		letter-spacing: normal;
+		margin-bottom: 10px;
+	}
+
+	.footer-motto-en {
+		font-size: 12px;
+	}
+
+	.footer-details-container {
+		padding: 0;
+	}
+
+	.footer-details-item {
+		margin-top: 20px;
+		font-size: 15px;
+	}
+
+	.footer-details-item i {
+		font-size: 14px;
+		margin-left: 6px;
+	}
+
+	.footer-social-container {
+		margin-top: 30px;
+	}
+
+	.footer-social-container i {
+		font-size: 17px;
+		margin-right: 5px;
+	}
+
+	.copy-right-container {
+		font-size: 13px;
+		color: #818181;
+		padding: 30px 0;
+	}
+
+	.copy-right-container span {
+		color: #01247e;
+		font-weight: 900;
+		font-size: 15px;
+		margin: 0 5px;
+	}
+
+	/*	------------	footer	------------	*/
+	/* ------  common  ------  */
 	.body-thin-line {
 		margin: 50px 0;
 	}
@@ -955,4 +1609,314 @@ p {
 	.primary-title {
 		font-size: 20px;
 	}
+
+	.footer-separator-line {
+		width: 100%;
+		height: 12px;
+		background-color: #01247e;
+	}
+
+	.footer-thin-line {
+		width: 100%;
+		margin: 30px 0;
+	}
+
+	.footer-vertical-line {
+		display: none;
+	}
+
+	/* ------  common  ------  */
+}
+
+/*	screen < xs	*/
+@media screen and (max-width: 400px) {
+	/*	------------	header	------------	*/
+	.nav-drawer span {
+		font-size: 12px !important;
+	}
+
+	.btn-close {
+		width: 10px !important;
+		height: 10px !important;
+	}
+
+	/*	------------	header	------------	*/
+	/*	------------	main	------------	*/
+	/* ------  banner section  ------  */
+	.main-banner-xs {
+		height: 230px;
+	}
+
+	/* ------  banner section  ------  */
+	/* ------  intro section  ------  */
+	.intro-container {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.intro-description {
+		font-size: 9px;
+		line-height: 25px;
+	}
+
+	.intro-container-mobile {
+		margin-bottom: 50px;
+		font-size: 5px;
+	}
+
+	.intro-description-button {
+		margin: 0 5px;
+		font-size: 8px;
+		box-shadow: 0 7px 10px 2px rgba(7, 30, 91, 0.1);
+	}
+
+	/* ------  intro section  ------  */
+	/* ------  product section  ------  */
+	.product-section {
+		padding-top: 30px;
+		padding-bottom: 70px
+	}
+
+	.product-container {
+		padding: 80px 10px 25px;
+		border-radius: 15px;
+		margin-top: 130px !important;
+		margin-bottom: 50px;
+	}
+
+	.product-description {
+		font-size: 10px;
+		line-height: 30px;
+		margin-top: 30px;
+	}
+
+	.product-header-mobile {
+		margin-right: 10px;
+	}
+
+	.product-button {
+		padding: 10px 15px;
+		font-size: 8px;
+	}
+
+	.button-icon {
+		margin-right: 10px;
+		width: 10px;
+	}
+
+	/* ------  product section  ------  */
+	/* ------  contact section  ------  */
+	.contact-section {
+		padding-top: 100px;
+		margin-top: 130px;
+		margin-bottom: 170px;
+	}
+
+	.contact-image {
+		top: -75px;
+		right: calc(100% / 2 - 75px);
+		padding: 20px;
+		border-radius: 25px;
+		width: 150px;
+		height: 150px;
+	}
+
+	.contact-title-1 {
+		font-size: 25px;
+	}
+
+	.contact-title-2 {
+		font-size: 14px;
+	}
+
+	.contact-title-3 {
+		font-size: 13px;
+		margin-top: 50px;
+	}
+
+	.contact-button {
+		width: fit-content;
+		padding: 10px 30px;
+		border-radius: 8px;
+		font-size: 25px;
+		margin-top: 15px;
+	}
+
+	/* ------  contact section  ------  */
+	/* ------  line - customer section  ------  */
+	.line-pic-container {
+		margin-top: 150px;
+		margin-bottom: 80px;
+	}
+
+	.line-customers-image {
+		width: 200px;
+		height: 200px;
+		left: calc(100% / 2 - 100px);
+		top: -130px;
+	}
+
+	/* ------  line - customer section  ------  */
+	/* ------  comment section  ------  */
+	.comment-header {
+		margin-bottom: 30px;
+	}
+
+	.comment-slide-header {
+		padding: 10px 15px;
+		font-size: 12px;
+	}
+
+	.comments-slide-body {
+		padding: 15px 20px 150px 20px;
+		font-weight: 600;
+		line-height: 26px;
+		font-size: 10px;
+	}
+
+	/* ------  comment section  ------  */
+	/* ------  line - learn section  ------  */
+	.line-learn-image {
+		width: 200px;
+		height: 200px;
+		left: calc(100% / 2 - 100px);
+		top: -130px;
+	}
+
+	/* ------  line - learn section  ------  */
+	/* ------  lesson section  ------  */
+	.lesson-body {
+		margin-bottom: 50px;
+	}
+
+	.lesson-shadow {
+		padding: 10px;
+	}
+
+	.lesson-title {
+		font-size: 12px;
+		margin-top: 20px;
+	}
+
+	.lesson-description {
+		margin-top: 5px;
+		margin-bottom: 20px;
+		font-size: 10px;
+		line-height: 25px;
+	}
+
+	/* ------  lesson section  ------  */
+	/*	------------	main	------------	*/
+	/*	------------	footer	------------	*/
+	.footer-container {
+		padding: 30px 30px;
+	}
+
+	.footer-primary-title {
+		font-size: 14px;
+		margin-bottom: 0;
+	}
+
+	.footer-primary-title i {
+		font-size: 20px;
+	}
+
+	.footer-list-item {
+		margin-top: 10px;
+		font-size: 11px;
+	}
+
+	.footer-list-item i {
+		font-size: 6px;
+		margin-left: 5px;
+	}
+
+	.footer-logo-container {
+		margin-bottom: 20px;
+	}
+
+	.footer-logo-header {
+		margin-right: 10px;
+	}
+
+	.footer-logo-image {
+		width: 60px;
+	}
+
+	.footer-SEPAHKAR-en {
+		font-size: 14px;
+	}
+
+	.footer-SEPAHKAR-fa {
+		font-size: 23px;
+	}
+
+	.footer-motto-fa {
+		font-size: 15px;
+		margin-bottom: 0;
+	}
+
+	.footer-motto-en {
+		font-size: 10px;
+	}
+
+	.footer-details-item {
+		margin-top: 10px;
+		font-size: 10px;
+	}
+
+	.footer-details-item i {
+		font-size: 10px;
+		margin-left: 5px;
+	}
+
+	.footer-social-container {
+		margin-top: 20px;
+	}
+
+	.footer-social-container i {
+		font-size: 14px;
+		margin-right: 3px;
+	}
+
+	.copy-right-container {
+		font-size: 10px;
+		padding: 20px 0;
+	}
+
+	.copy-right-container span {
+		font-size: 12px;
+	}
+
+	/*	------------	footer	------------	*/
+	/*	------------	common	------------	*/
+	.underline-word {
+		height: 3px;
+		width: 30px;
+		margin-top: 8px;
+	}
+
+	.primary-title {
+		font-size: 14px;
+	}
+
+	.body-thin-line, .body-thin-blue-line {
+		margin: 40px 0;
+	}
+
+	.body-thick-line {
+		height: 4px;
+		width: 50px;
+		margin: 40px 0;
+	}
+
+	.footer-separator-line {
+		height: 8px;
+	}
+
+	.footer-thin-line {
+		margin: 20px 0;
+	}
+
+	/*	------------	common	------------	*/
 }
